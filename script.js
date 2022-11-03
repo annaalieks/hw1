@@ -25,7 +25,7 @@ const resultsArray = [1, 2, [3, [4]]];
 let productOfArray;
 
 const initialValue = 1;
-productOfArray = resultsArray.flat().reduce(
+productOfArray = resultsArray.flat(Infinity).reduce(
     (previousValue, currentValue) =>
         previousValue * currentValue,
         initialValue
