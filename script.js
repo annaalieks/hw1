@@ -5,7 +5,9 @@
 const userNames = ["Петрик Ольга Іванівна", "Гнатюк Петро Антонович", "Рудко Андрій Опанасович"];
 let initials;
 
-initials = userNames.map(name => name.split(" ").map(initial => initial[0]).join(".")).sort();
+// initials = userNames.map(name => name.split(" ").map(initial => initial[0]).join(".")).sort();
+
+initials = userNames.map(name => name.split(" ").map(initial => initial.charAt(0)+".").join("")).sort();
 
 console.log(initials); // [ "Г.П.А", "П.О.І", "Р.А.О"]
 
